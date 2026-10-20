@@ -88,6 +88,18 @@ createServer((req, res) => {
     // otherwise fall through: Next's own build assets (dev mode etc.)
   }
 
+  // Serve /assets/ directly from public/assets/
+  if (url.pathname.startsWith('/assets/')) {
+    const file = path.join(__dirname, 'public', url.pathname);
+    if (fs.existsSync(file) && fs.statSync(file).isFile()) return sendFile(req, res, file);
+  }
+
+  // Fast-path /static/ from public/static/
+  if (url.pathname.startsWith('/static/')) {
+    const file = path.join(__dirname, 'public', url.pathname);
+    if (fs.existsSync(file) && fs.statSync(file).isFile()) return sendFile(req, res, file);
+  }
+
   // Alias for legacy /original-assets/ paths
   if (url.pathname.startsWith('/original-assets/')) {
     const file = path.join(VENDOR, url.pathname.replace('/original-assets/', '/_next/static/'));
