@@ -7,3 +7,4 @@
 svg[viewBox="0 0 80 64"]{aspect-ratio:1600/799;background:url('/images/logo.png') center/contain no-repeat}
 svg[viewBox="0 0 80 64"] path{display:none}
 @media (max-width:767.98px){svg[viewBox="0 0 80 64"].h-16{width:7.5rem}}
+@media (min-width:768px){.tablet\:flex-1{flex:1}}
