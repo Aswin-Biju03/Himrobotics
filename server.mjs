@@ -88,6 +88,12 @@ createServer((req, res) => {
     // otherwise fall through: Next's own build assets (dev mode etc.)
   }
 
+  // Alias for legacy /original-assets/ paths
+  if (url.pathname.startsWith('/original-assets/')) {
+    const file = path.join(VENDOR, url.pathname.replace('/original-assets/', '/_next/static/'));
+    if (fs.existsSync(file) && fs.statSync(file).isFile()) return sendFile(req, res, file);
+  }
+
   // 4) Everything else: Next (pages live in app/).
   handle(req, res);
 }).listen(port, () => {
