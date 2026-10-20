@@ -1,9 +1,9 @@
 {
-  "name": "mind-robotics-clone-next",
+  "name": "him-robotics",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "100% fidelity Next.js (App Router) clone of www.mindrobotics.com, reusing the original compiled front-end.",
+  "description": "Next.js application for HIM Robotics - Intelligent Autonomous Solutions.",
   "scripts": {
     "dev": "node server.mjs --dev",
     "build": "next build && node scripts/copy-vendor.mjs",

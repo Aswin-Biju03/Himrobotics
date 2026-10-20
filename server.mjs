@@ -109,5 +109,5 @@ createServer((req, res) => {
   // 4) Everything else: Next (pages live in app/).
   handle(req, res);
 }).listen(port, () => {
-  console.log(`Mind Robotics clone (Next.js, ${dev ? 'dev' : 'production'}) listening on http://localhost:${port}`);
+  console.log(`HIM Robotics (Next.js, ${dev ? 'dev' : 'production'}) listening on http://localhost:${port}`);
 });

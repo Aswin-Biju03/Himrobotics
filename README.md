@@ -1,9 +1,9 @@
-# Mind Robotics — Next.js clone
+# HIM Robotics — Next.js Application
 
-100% fidelity Next.js (App Router) port of the Mind Robotics site clone. It reuses the
-site's original compiled front-end — CSS, client JS chunks, webfonts, images and the
-Three.js models — so every animation, 3D scene and interaction behaves exactly like the
-original, while page serving and routing run through Next.js.
+Next.js (App Router) website for HIM Robotics — Intelligent Autonomous Solutions.
+Reuses optimized high-performance client JS chunks, webfonts, images, and Three.js
+models for interactive 3D robotics visualizations, while page serving and routing run
+through Next.js.
 
 ## Run it
 
@@ -59,4 +59,4 @@ paths cannot be served from `public/`. The custom server (a documented Next.js p
 serves them before Next sees the request, which is what keeps the original runtime and
 RSC payload 100% intact.
 
-_Original site content © Mind Robotics. This clone is for local/archival use._
+_HIM Robotics — All rights reserved._
