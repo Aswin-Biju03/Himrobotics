@@ -6,7 +6,7 @@
   "description": "100% fidelity Next.js (App Router) clone of www.mindrobotics.com, reusing the original compiled front-end.",
   "scripts": {
     "dev": "node server.mjs --dev",
-    "build": "next build",
+    "build": "next build && node scripts/copy-vendor.mjs",
     "start": "node server.mjs"
   },
   "dependencies": {
